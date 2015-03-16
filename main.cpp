@@ -14,7 +14,7 @@ void read_data(std::vector<int> &data, size_t &element_number)
     }
 }
 
-void count_LIC(std::vector<size_t> &index, const std::vector<int> &data, const size_t element_number)
+void count_LIS(std::vector<size_t> &index, const std::vector<int> &data, const size_t element_number)
 {
     std::vector<int> ending(element_number + 1, INT_MAX);
     std::vector<int> previous(element_number, INT_MAX);
@@ -61,7 +61,7 @@ int main()
 
     std::vector<size_t> answer;
 
-    count_LIC(answer, data, element_number);
+    count_LIS(answer, data, element_number);
     write_answer(answer);
 
     return 0;
